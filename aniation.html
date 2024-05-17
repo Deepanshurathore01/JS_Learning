@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: #09BB98;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+    #insider{
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: #0956bb;
+      border: 2px solid salmon;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="insider">
+
+     </div>
+
+  </div>
+  <p> <button onclick="myMove()">click</button></p>
+
+  <script>
+
+    function myMove()
+    {
+      let pos =0;
+      const elem =document.getElementById('insider');
+
+      const id =setInterval(frame,30);
+    
+
+    function frame()
+    {
+      if(pos==340){
+        
+        clearInterval(id);
+      }
+      pos++;
+
+      elem.style.top =pos+ 'px';
+      elem.style.left =pos++ + 'px';
+    }
+  }
+
+  </script>
+
+
+</body>
+</html>
